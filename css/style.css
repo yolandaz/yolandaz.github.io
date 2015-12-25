@@ -159,6 +159,8 @@ html,body{
 	display: flex;
   font-size: 40px;
   margin-top: 50px;
+	-webkit-justify-content: space-around;
+  -ms-flex-pack: distribute;
   justify-content: space-around;
 }
 
