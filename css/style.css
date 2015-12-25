@@ -59,7 +59,7 @@ canvas{
 
 #intro{
   padding: 10px 20px;
-  background-color: #111;
+  /*background-color: #111;*/
   color: white;
   position: absolute;
   top: 50%;
