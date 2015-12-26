@@ -1,7 +1,7 @@
 //typing
 $(function(){
     $(".type").typed({
-      strings: ["learn.", "design.", "code.", "create."],
+      strings: ["create.",  "design.", "code.", "solve.", "dream."],
       typeSpeed: 50,
       backSpeed: 50,
       backDelay: 1000,
