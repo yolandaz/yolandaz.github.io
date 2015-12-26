@@ -55,11 +55,19 @@ html,body{
 	transform: translate(-50%, -50%);
 }
 
+#avatar{
+	width: 100px;
+	height: 100px;
+	margin: 0 auto;
+	display: block;
+}
+
 #name{
   font-family: 'Euphoria Script',sans-serif;
   font-weight:normal;
   font-size: 90px;
   text-align: center;
+	margin-top: 15px;
 }
 
 #desc{
