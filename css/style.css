@@ -1,184 +1,254 @@
 /* =============================================================================
    HTML5 CSS Reset Minified - Eric Meyer
    ========================================================================== */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
 
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
-body{line-height:1}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-nav ul{list-style:none}
-blockquote,q{quotes:none}
-blockquote:before,blockquote:after,q:before,q:after{content:none}
-a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
-mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
-del{text-decoration:line-through}
-abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
-table{border-collapse:collapse;border-spacing:0}
-hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
-input,select{vertical-align:middle}
-li{list-style:none}
+body {
+  line-height: 1; }
 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  text-decoration: none; }
+
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+li {
+  list-style: none; }
 
 /* =============================================================================
    My CSS
    ========================================================================== */
-
-/* ---- base ---- */
-
-html,body{
-	width:100%;
-	height:100%;
-	background:#111;
-}
-
-/* ---- particles.js container ---- */
-
-#particles-js{
+/* ---- BASE ---- */
+html, body {
   width: 100%;
   height: 100%;
-  background-color: #111;
-  background-image: url('');
+  background: white;
+  font-family: Montserrat, Helvetica, Arial, sans-serif; }
+
+/* montserrat */
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Bold.otf);
+  font-weight: 700; }
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-SemiBold.otf);
+  font-weight: 600; }
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Regular.otf);
+  font-weight: 400; }
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Light.otf);
+  font-weight: 300; }
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-UltraLight.otf);
+  font-weight: 200; }
+@font-face {
+  font-family: Montserrat;
+  src: url(../fonts/Montserrat-Thin.otf);
+  font-weight: 100; }
+/* icons */
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?f3vf0h");
+  src: url("../fonts/icomoon.eot?f3vf0h#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?f3vf0h") format("truetype"), url("../fonts/icomoon.woff?f3vf0h") format("woff"), url("../fonts/icomoon.svg?f3vf0h#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+[class^="icon-"], [class*=" icon-"] {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-profile:before {
+  content: "\e900"; }
+
+.icon-envelop:before {
+  content: "\e901"; }
+
+.icon-briefcase:before {
+  content: "\e906"; }
+
+.icon-download2:before {
+  content: "\e907"; }
+
+.icon-mail4:before {
+  content: "\e913"; }
+
+.icon-github:before {
+  content: "\e915"; }
+
+.icon-linkedin:before {
+  content: "\e916"; }
+
+.icon-linkedin2:before {
+  content: "\e917"; }
+
+.icon-file-pdf:before {
+  content: "\e918"; }
+
+/* ---- INTRO ---- */
+#intro {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  color: white; }
+
+#intro #particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  background-image: url("");
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-}
+  position: absolute; }
 
-/* ---- my intro ---- */
-
-#intro{
-  padding: 10px 20px;
-  color: white;
+#intro #intro-container {
   position: absolute;
-  top: 50%;
   left: 50%;
-	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
-	transform: translate(-50%, -50%);
-}
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
 
-#avatar{
-	width: 100px;
-	height: 100px;
-	margin: 0 auto;
-	display: block;
-}
-
-#name{
+#intro #name {
   font-family: 'Euphoria Script',sans-serif;
-  font-weight:normal;
+  font-weight: normal;
   font-size: 90px;
   text-align: center;
-	margin-top: 15px;
-}
+  margin-top: 15px; }
 
-#desc{
-  font-family: Lato,sans-serif;
-  font-weight:300;
-  font-size:30px;
-  margin-top:15px;
+#intro #desc {
+  font-weight: 300;
+  font-size: 30px;
+  margin-top: 15px;
   text-align: center;
-}
+  font-weight: 100; }
 
-.type{
-  font-weight:700;
-}
+#intro .type {
+  font-weight: 400; }
 
-/* blinking cursor */
-.typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-}
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-
-/* ---- icons ---- */
-
-@font-face {
-    font-family: 'icomoon';
-    src:    url('../fonts/icomoon.eot?f3vf0h');
-    src:    url('../fonts/icomoon.eot?f3vf0h#iefix') format('embedded-opentype'),
-        url('../fonts/icomoon.ttf?f3vf0h') format('truetype'),
-        url('../fonts/icomoon.woff?f3vf0h') format('woff'),
-        url('../fonts/icomoon.svg?f3vf0h#icomoon') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-[class^="icon-"], [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'icomoon' !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-.icon-profile:before {
-    content: "\e900";
-}
-.icon-envelop:before {
-    content: "\e901";
-}
-.icon-briefcase:before {
-    content: "\e906";
-}
-.icon-download2:before {
-    content: "\e907";
-}
-.icon-mail4:before {
-    content: "\e913";
-}
-.icon-github:before {
-    content: "\e915";
-}
-.icon-linkedin:before {
-    content: "\e916";
-}
-.icon-linkedin2:before {
-    content: "\e917";
-}
-.icon-file-pdf:before {
-    content: "\e918";
-}
-
-#buttons{
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
+#intro #buttons {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   font-size: 40px;
   margin-top: 50px;
-	-webkit-justify-content: space-around;
+  -webkit-justify-content: space-around;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
-}
+  justify-content: space-around; }
 
-.icon {
-  color: white;
-  -webkit-transition: color .19s linear;
-  -o-transition: color .19s linear;
-  transition: color .19s linear;
-}
+#intro .icon {
+  color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: color .1s linear;
+  -o-transition: color .1s linear;
+  transition: color .1s linear; }
 
-.icon:hover {
-    color: gray;
-}
+#intro .icon:hover {
+  color: white; }
+
+#intro #navLinks {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  position: relative;
+  top: 93%;
+  width: 450px;
+  margin: auto;
+  font-size: 20px;
+  font-weight: 100; }
+
+#intro #navLinks a {
+  color: rgba(255, 255, 255, 0.5); }
+
+#intro #navLinks a:hover {
+  color: white; }
+
+/* blinking cursor */
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite; }
+
+@keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@-moz-keyframes blink {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+/*# sourceMappingURL=style.css.map */
