@@ -15,21 +15,17 @@
 
     <!-- CSS -->
     <link href='css/animate.min.css' rel='stylesheet' type='text/css'>
-    <link href='css/normalize.min.css' rel='stylesheet' type='text/css'>
     <link href='css/style.css' rel='stylesheet' type='text/css'>
 
   </head>
   <body>
-    <!-- particles.js container -->
-
-
     <!-- intro section -->
-    <div id="intro">
+    <section id="intro">
       <div id="particles-js"></div>
       <div id="intro-container">
         <h1 id="name" class="animated fadeInDown">Yolanda Zhou</h1>
         <p id="desc" class="animated fadeIn">I love to <span class="type"></span></p>
-        <div id="buttons" class="animated fadeInUp">
+        <div id="intro-buttons" class="animated fadeInUp">
           <a href="https://github.com/yolandaz"><span class="icon icon-github"></span></a>
           <a href="https://linkedin.com/in/yolandaz"><span class="icon icon-linkedin"></span></a>
           <a href="mailto:yolandaz@mit.edu"><span class="icon icon-mail4"></span></a>
@@ -41,11 +37,113 @@
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </div>
-    </div>
+    </section>
 
     <!-- about section -->
+    <section id="about">
+      <div class="section-container">
+        <h1 class="section-title">About Me</h1>
+        <div id="about-info-container">
+          <img src="assets/photo.jpg" id="about-avatar" />
+          <div id="about-info">
+            <p>Hi! I’m Yolanda. I like making pretty things.</p>
+            <p>Right now, I’m a undergrad at MIT studying computer science.</p>
+            <h2>I really like...</h2>
+            <p>Typography. Graphic Design. Web Design. Animation. Motion Design. UI/UX. iOS. Infographics.</p>
+            <h2>I'm also passionate about...</h2>
+            <p>Education. Astronomy. Dancing. Cats. And food, especially chocolate.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- experience section -->
+    <section id="experience">
+      <div class="section-container">
+        <h1 class="section-title">Experience</h1>
+        <div id="project-container">
+          <a href="#" class="project">
+            <div class="project-pic" id="project-portfolio">
+              <div class="project-overlay">
+                <span class="project-info">Details Coming Soon</span>
+              </div>
+            </div>
+            <p>yolandaz.github.io</p>
+          </a>
+          <a href="#" class="project">
+            <div class="project-pic" id="project-scioly">
+              <div class="project-overlay">
+                <span class="project-info">Details Coming Soon</span>
+              </div>
+            </div>
+            <p>scioly.org redesign</p>
+          </a>
+          <a href="#" class="project">
+            <div class="project-pic" id="project-cartera">
+              <div class="project-overlay">
+                <span class="project-info">Details Coming Soon</span>
+              </div>
+            </div>
+            <p>cartera.com</p>
+          </a>
+          <a href="#" class="project">
+            <div class="project-pic" id="project-adt">
+              <div class="project-overlay">
+                <span class="project-info">Details Coming Soon</span>
+              </div>
+            </div>
+            <p>ADT sales &amp; media</p>
+          </a>
+          <a href="#" class="project">
+            <div class="project-pic" id="project-dnb">
+              <div class="project-overlay">
+                <span class="project-info">Details Coming Soon</span>
+              </div>
+            </div>
+            <p>D&amp;B Infographics</p>
+          </a>
+          <a href="#" class="project">
+            <div class="project-pic" id="project-freecodecamp">
+              <div class="project-overlay">
+                <span class="project-info">Details Coming Soon</span>
+              </div>
+            </div>
+            <p>Freecodecamp Projects</p>
+          </a>
+        </div>
+      </div>
+    </section>
 
+    <!-- contact section -->
+    <section id="contact">
+      <div class="section-container">
+        <h1 class="section-title">Contact Me</h1>
+        <h2>You can fill out the form below to send me an email!</h2>
+        <div class="contact-field">
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" />
+        </div>
+        <div class="contact-field">
+          <label for="contact-subject">Subject</label>
+          <input type="text" id="contact-subject" />
+        </div>
+        <div class="contact-field">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message"></textarea>
+        </div>
+        <button id="contact-send">Send</button>
+      </div>
+    </section>
+
+    <footer>
+      <div id="footer-buttons">
+        <a href="https://github.com/yolandaz"><span class="icon icon-github"></span></a>
+        <a href="https://linkedin.com/in/yolandaz"><span class="icon icon-linkedin"></span></a>
+        <a href="mailto:yolandaz@mit.edu"><span class="icon icon-mail4"></span></a>
+        <a href="YolandaZhouResume.pdf"><span class="icon icon-profile"></span></a>
+      </div>
+      <h1>Made with <span class="icon icon-heart"></span> by Yolanda Zhou<h1>
+    </footer>
 
     <!-- scripts -->
     <script src="js/particles.min.js"></script>

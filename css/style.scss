@@ -1,35 +1,27 @@
 /* =============================================================================
-   HTML5 CSS Reset Minified - Eric Meyer
+   FOUNDATION
    ========================================================================== */
 
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
-body{line-height:1}
-article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-nav ul{list-style:none}
-blockquote,q{quotes:none}
-blockquote:before,blockquote:after,q:before,q:after{content:none}
+/* Jayden Seric's Foundation */
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0;font:16px/1 sans-serif;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}h1,h2,h3,h4,p,blockquote,figure,ol,ul{margin:0;padding:0}main,li{display:block}h1,h2,h3,h4{font-size:inherit}strong{font-weight:700}a,button{color:inherit;transition:.3s}a{text-decoration:none}button{overflow:visible;border:0;font:inherit;-webkit-font-smoothing:inherit;letter-spacing:inherit;background:none;cursor:pointer}::-moz-focus-inner{padding:0;border:0}:focus{outline:0}img{max-width:100%;height:auto;border:0}
+
+/* My Foundation */
 a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;text-decoration:none}
-mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
-del{text-decoration:line-through}
-abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
-table{border-collapse:collapse;border-spacing:0}
-hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
-input,select{vertical-align:middle}
 li{list-style:none}
+* {-moz-box-sizing: border-box;box-sizing: border-box}
+
+/* Background */
+html,body{
+  width:100%;
+  height:100%;
+  background:rgb(255,255,255);
+  font-family:Montserrat, Helvetica, Arial, sans-serif;
+}
 
 
 /* =============================================================================
-   My CSS
+   FONTS
    ========================================================================== */
-
-/* ---- BASE ---- */
-
-html,body{
-	width:100%;
-	height:100%;
-	background:rgb(255,255,255);
-	font-family:Montserrat, Helvetica, Arial, sans-serif;
-}
 
 /* montserrat */
 
@@ -122,7 +114,9 @@ html,body{
     content: "\e918";
 }
 
-/* ---- INTRO ---- */
+/* =============================================================================
+   INTRO SECTION
+   ========================================================================== */
 
 #intro{
 	height: 100%;
@@ -131,7 +125,7 @@ html,body{
   color: white;
 }
 
-#intro #particles-js{
+#particles-js{
   width: 100%;
   height: 100%;
   background-color: rgb(26,26,26);
@@ -139,10 +133,9 @@ html,body{
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-	position:absolute;
 }
 
-#intro #intro-container {
+#intro-container {
 	position:absolute;
 	left:50%;
 	top: 50%;
@@ -151,7 +144,7 @@ html,body{
 	transform: translate(-50%,-50%);
 }
 
-#intro #name{
+#name{
   font-family: 'Euphoria Script',sans-serif;
   font-weight:normal;
   font-size: 90px;
@@ -159,7 +152,7 @@ html,body{
 	margin-top: 15px;
 }
 
-#intro #desc{
+#desc{
   font-weight:300;
   font-size:30px;
   margin-top:15px;
@@ -171,7 +164,7 @@ html,body{
   font-weight:400;
 }
 
-#intro #buttons{
+#buttons{
 	display: -ms-flexbox;
 	display: -webkit-flex;
 	display: flex;
@@ -193,7 +186,7 @@ html,body{
   color: rgba(255,255,255,1);
 }
 
-#intro #navLinks {
+#navLinks {
 	display: flex;
 	justify-content: space-between;
 	text-transform:uppercase;
@@ -205,11 +198,11 @@ html,body{
 	font-weight: 100;
 }
 
-#intro #navLinks a {
+#navLinks a {
   color: rgba(255,255,255,0.5);
 }
 
-#intro #navLinks a:hover {
+#navLinks a:hover {
   color: rgba(255,255,255,1);
 }
 

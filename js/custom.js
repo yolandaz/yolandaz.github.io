@@ -123,3 +123,38 @@ particlesJS('particles-js',
   }
 
 );
+
+//click send button
+$( document ).ready(function() {
+  $( "#contact-send" ).click(function() {
+    var name = encodeURIComponent($("#contact-name").val());
+    var subject = encodeURIComponent($("#contact-subject").val());
+    var message = encodeURIComponent($("#contact-message").val());
+    window.location.href = "mailto:yolandaz@mit.edu?subject=" + subject + "&body=" + message + "%0A%0A" + name;
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
