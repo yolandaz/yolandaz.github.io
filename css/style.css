@@ -436,8 +436,6 @@ section{
   text-align: center;
   opacity: 1;
   line-height:160px;
-  -webkit-transition: opacity .25s ease;
-  -moz-transition: opacity .25s ease;
   opacity:0;
 }
 
