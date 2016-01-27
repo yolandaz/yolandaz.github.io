@@ -124,15 +124,94 @@ particlesJS('particles-js',
 
 );
 
-//click send button
+
 $( document ).ready(function() {
+  //click send button
   $( "#contact-send" ).click(function() {
     var name = encodeURIComponent($("#contact-name").val());
     var subject = encodeURIComponent($("#contact-subject").val());
     var message = encodeURIComponent($("#contact-message").val());
     window.location.href = "mailto:yolandaz@mit.edu?subject=" + subject + "&body=" + message + "%0A%0A" + name;
   });
+  //smooth scrolling
+  $('#nav a').click(function(){
+      $('html, body').animate({
+          scrollTop: $( $.attr(this, 'href') ).offset().top
+      }, 500);
+      return false;
+  });
+  //view header when goes into view & scrollspy
+  var aboutSection = new Waypoint({
+    element: $('#about')[0],
+    handler: function(direction) {
+      if (direction==="down"){
+        $("#nav").removeClass("animated");
+        $("#nav").addClass("visible");
+        $("#nav-container a").removeClass("active");
+        $("#nav-about").addClass("active");
+        console.log(direction);
+      } else {
+        $("#nav").removeClass("visible");
+        console.log(direction);
+      }
+    },
+    offset: 50
+  });
+  //scrollspy for the rest of them
+  var aboutSection = new Waypoint({
+    element: $('#experience')[0],
+    handler: function(direction) {
+      if (direction==="down"){
+        $("#nav-container a").removeClass("active");
+        $("#nav-"+this.element.id).addClass("active");
+      } else {
+        $("#nav-container a").removeClass("active");
+        $("#nav-"+this.element.id).prev().addClass("active");
+      }
+    },
+    offset: 50
+  });
+  var aboutSection = new Waypoint({
+    element: $('#contact')[0],
+    handler: function(direction) {
+      if (direction==="down"){
+        $("#nav-container a").removeClass("active");
+        $("#nav-"+this.element.id).addClass("active");
+      } else {
+        $("#nav-container a").removeClass("active");
+        $("#nav-"+this.element.id).prev().addClass("active");
+      }
+    },
+    offset: 50
+  });
+
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
