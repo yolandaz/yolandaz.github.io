@@ -135,10 +135,10 @@ $( document ).ready(function() {
   });
   //smooth scrolling
   $('#nav a').click(function(){
-      $('html, body').animate({
-          scrollTop: $( $.attr(this, 'href') ).offset().top
-      }, 500);
-      return false;
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+    return false;
   });
   //view header when goes into view & scrollspy
   var aboutSection = new Waypoint({
@@ -149,10 +149,8 @@ $( document ).ready(function() {
         $("#nav").addClass("visible");
         $("#nav-container a").removeClass("active");
         $("#nav-about").addClass("active");
-        console.log(direction);
       } else {
         $("#nav").removeClass("visible");
-        console.log(direction);
       }
     },
     offset: 50
@@ -184,9 +182,51 @@ $( document ).ready(function() {
     },
     offset: 50
   });
+  //project expanders
+  $('.project-item').click(function(){
+    //select correct expander
+    var expander = $("#"+$(this).attr("data-ex"));
 
+    //if clicked the open item, close it
+    if ($(this).hasClass("open")) {
+      $(this).removeClass("open");
+      expander.removeClass("open");
+    } else {
+      //if not, close all
+      $(".project-item").removeClass("open");
+      $(".project-expander").removeClass("open");
+
+      //move expander to right place
+      var containerWidth = $("#project-container").width();
+      var projectWidth = $(".project-item").width();
+      var itemsPerRow = Math.floor(containerWidth/projectWidth);
+      var projectIndex = $(this).index(".project-item")+1;
+      var insertIndex = Math.ceil(projectIndex/itemsPerRow)*itemsPerRow-1;
+      var insertAfterItem = $(".project-item:eq("+insertIndex+")");
+      
+      expander.insertAfter(insertAfterItem); 
+
+      //fixth width and positioning
+      expander.width($(window).width()-expander.css("padding-left").replace("px", "")-expander.css("padding-right").replace("px", ""));
+      expander.css("margin-left",-($(window).width()-$("#project-container").width())/2);
+
+      //display expander
+      $(this).addClass("open");
+      expander.addClass("open");
+
+      //jump bottom of page to bottom of expander
+      $('html, body').animate({
+        scrollTop: expander.offset().top + expander.outerHeight() - $(window).height()
+      }, 500); 
+    }
+
+    
+  });
 });
 
+$(window).load(function() {
+  $('.flexslider').flexslider();
+});
 
 
 
