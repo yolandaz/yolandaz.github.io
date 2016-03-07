@@ -201,7 +201,11 @@ $( document ).ready(function() {
       var projectWidth = $(".project-item").width();
       var itemsPerRow = Math.floor(containerWidth/projectWidth);
       var projectIndex = $(this).index(".project-item")+1;
+      var numProjects = $('.project-item').length;
       var insertIndex = Math.ceil(projectIndex/itemsPerRow)*itemsPerRow-1;
+      if (insertIndex >= numProjects){
+        insertIndex = numProjects - 1;
+      }
       var insertAfterItem = $(".project-item:eq("+insertIndex+")");
       
       expander.insertAfter(insertAfterItem); 
@@ -219,8 +223,6 @@ $( document ).ready(function() {
         scrollTop: expander.offset().top + expander.outerHeight() - $(window).height()
       }, 500); 
     }
-
-    
   });
 });
 

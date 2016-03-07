@@ -50,7 +50,13 @@
       <div class="section-container">
         <h1 class="section-title">About Me</h1>
         <div id="about-info-container">
-          <img src="assets/photo.jpg" id="about-avatar" />
+          <div id="about-left">
+            <img src="assets/photo.jpg" id="about-avatar" />
+            <a id="about-resume" href="YolandaZhouResume.pdf">
+              <div id="about-resume-icon"><span class="icon icon-download2"></span></div><!--
+              --><div id="about-resume-text">View Resume</div>
+            </a>
+          </div>
           <div id="about-info">
             <p>Hi! I’m Yolanda. I like making pretty things.</p>
             <p>Right now, I’m a undergrad at MIT studying computer science.</p>
@@ -68,7 +74,46 @@
       <div class="section-container">
         <h1 class="section-title">Experience</h1>
         <div id="project-container">
-          <div class="project-item" data-ex="portfolio-expander">
+          <div class="project-item" data-ex="con-expander">
+            <img src="assets/con.png" />
+            <div class="project-overlay">
+              <strong>Committee of N</strong>
+              <p>HTML &#183; CSS &#183; JS &#183; JQuery &#183; Git &#183; Node.js &#183; Socket.IO &#183; AI &#183; PS</p>
+            </div>
+            <div class="project-expander" id="con-expander">
+              <div class="project-expander-container">
+                <div class="image-container">
+                  <img src="assets/con.png" />
+                </div>
+                <div class="info-container">
+                  <h2>Committee of N</h2>
+                  <p>HTML &#183; CSS &#183; JS &#183; JQuery &#183; Git &#183; Node.js &#183; Socket.IO &#183; AI &#183; PS</p>
+                  <p>As part of MIT's Undergraduate Research Program, I got a position as a web game developer in MIT's Teaching Systems Lab. Working with another student, we are creating from a scratch a called called Committee of N. My main job was designing the interface and doing all the front-end development. I played around with a lot of technologies, including Socket.IO, which we are using so that students can play the game asynchronously. I also helped with the database design and backend research and setup.</p>
+                </div>
+              </div>
+            </div>
+          </div><!--
+       --><div class="project-item" data-ex="dfa-expander">
+            <img src="assets/dfa.png" />
+            <div class="project-overlay">
+              <strong>Design For America</strong>
+              <p>HTML &#183; CSS &#183; JS &#183; JQuery &#183; Git &#183; AI &#183; PS</p>
+            </div>
+            <div class="project-expander" id="dfa-expander">
+              <div class="project-expander-container">
+                <div class="image-container">
+                  <img src="assets/dfa.png" />
+                </div>
+                <div class="info-container">
+                  <h2>yolandaz.github.io</h2>
+                  <p>HTML &#183; CSS &#183; JS &#183; JQuery &#183; Git &#183; AI &#183; PS</p>
+                  <p>I became the assistant webmaster for MIT's Design for America this semester. The DFA website needed many major changes, and I was mostly in charge of that. We are also in the process of integrating Django. In addition to this position, I mentor DFA project teams on website development issues.</p>
+                  <a href="http://designforamerica.mit.edu/" class="big-button" target="_blank">Visit Website</a>
+                </div>
+              </div>
+            </div>
+          </div><!--
+       --><div class="project-item" data-ex="portfolio-expander">
             <img src="assets/portfolio.png" />
             <div class="project-overlay">
               <strong>yolandaz.github.io</strong>
@@ -81,6 +126,7 @@
                 </div>
                 <div class="info-container">
                   <h2>yolandaz.github.io</h2>
+                  <p>HTML &#183; CSS &#183; JS &#183; JQuery &#183; AI &#183; PS</p>
                   <p>Creating my personal portfolio website was a project I wanted to undertake for a long time. Apart from the JavaScript libraries I used, I made everything from scratch. I did a lot of tinkering on Adobe Illustrator for the initial mockups. I also learned more about HTML, CSS, JQuery, and the different JavaScript libraries that exist.</p>
                 </div>
               </div>
@@ -114,6 +160,7 @@
                 </div>
                 <div class="info-container">
                   <h2>scioly.org redesign</h2>
+                  <p>AI &#183; HTML &#183; CSS &#183; JS</p>
                   <p>I spent massive amounts of time doing Science Olympiad in middle and high school, so when my friend asked me to redo the front end for the Science Olympiad Student Center, I was incredibly excited to work on a project that I would be very attached to from the very beginning. So far, I am still working on making and coding the initial designs, which you can see in the gallery.</p>
                 </div>
               </div>
@@ -132,6 +179,7 @@
                 </div>
                 <div class="info-container">
                   <h2>cartera.com</h2>
+                  <p>HTML &#183; CSS &#183; JS  &#183; JQuery &#183; Ajax &#183; PS</p>
                   <p>During my internship at Cartera Commerce, I completely recreated the main Cartera website. Using SquareSpace as a foundation so the marketing team could easily change content, I created a sleek and responsive website. Because the content was mostly given, I just wrote a lot of CSS and Javascript/JQuery for the functionality SquareSpace didn't have to offer.</p>
                   <a href="http://www.cartera.com" class="big-button" target="_blank">Visit Website</a>
                 </div>
@@ -163,6 +211,7 @@
                 </div>
                 <div class="info-container">
                   <h2>ADT Sales &amp; Media</h2>
+                  <p>PS &#183; AI</p>
                   <p>As the co-director of Sales and Media for MIT's Asian Dance Team, I'm in charge of designing promotional posters, flyers, videos, shirt designs, ticket designs, and anything else ADT wants to have. I also organize photoshoots, sell show tickets, and create and sell DVDs of our show. Featured on the left are a few of the workshop and audition posters I made for the coming semester.</p>
                 </div>
               </div>
@@ -190,6 +239,7 @@
                 </div>
                 <div class="info-container">
                   <h2>D&amp;B Infographics</h2>
+                  <p>AI &#183; PS</p>
                   <p>During my internship at Dun &amp; Bradstreet, I found that the vast majority of the employees outside the security team had no idea why security's processes were the way they were. Therefore, one of my tasks was to create infographics detailing the application security and risk assessment processes in a graphical and fun way, so that other teams could understand what went into the security process better.</p>
                 </div>
               </div>
@@ -226,6 +276,7 @@
                 </div>
                 <div class="info-container">
                   <h2>FreeCodeCamp Projects</h2>
+                  <p>HTML &#183; CSS &#183; JS &#183; JQuery &#183; Ajax &#183; Bootstrap</p>
                   <p>On FreeCodeCamp, I completed 10 projects and around 300 mini-lessons to earn the front-end developer certification. I spent many, many hours practicing my web design and algorithms skills. You can see my projects by clicking on my portfolio below or through the gallery.</p>
                   <a href="http://www.freecodecamp.com/yolandaz" class="big-button" target="_blank">View My Profile</a>
                 </div>
