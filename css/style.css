@@ -109,6 +109,25 @@ html,body{
 }
 
 /* =============================================================================
+   GLOBAL THINGS
+   ========================================================================== */
+
+.big-button {
+  text-align: center;
+  border:#111 solid 2px;
+  font-weight:500;
+  padding:5px 10px;
+  display:inline-block;
+  margin-top:15px;
+}
+
+.big-button:hover {
+  background-color:#333;
+  border-color:#333;
+  color:white;
+}
+
+/* =============================================================================
    INTRO SECTION
    ========================================================================== */
 
@@ -359,47 +378,22 @@ section{
 #about-avatar {
   width: 200px;
   border-radius:50%;
-}
-
-#about-resume {
   display:block;
-  font-size:0;
-  line-height:0;
-  border-radius:3px;
+}
+
+#about .big-button {
   width:85%;
-  margin: 0 auto;
   margin-top:20px;
-}
-
-#about-resume-icon {
-  background-color:rgba(0,0,0,0.3);
-  display:inline-block;
+  padding:0;
   height:35px;
-  width:23%;
+  line-height: 33px;
   font-size:18px;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-  border-top-left-radius: 3px;
-}
-
-#about-resume-icon span {
   vertical-align:middle;
-  line-height:34px;
 }
 
-#about-resume-text {
-  background-color:rgba(0,0,0,0.15);
-  display:inline-block;
-  height:35px;
-  width:77%;
-  vertical-align:top;
+.about-resume span {
+  margin-right:5px;
   font-size:15px;
-  padding-top:18px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 3px;
-  border-top-right-radius: 3px;
-  border-top-left-radius: 0;
 }
 
 #about-info {
@@ -539,7 +533,7 @@ section{
 }
 
 .project-expander .image-container {
-  width:50%;
+  width:40%;
   text-align:center;
   padding-right:20px;
   display:inline-block;
@@ -556,7 +550,7 @@ section{
 }
 
 .project-expander .info-container {
-  width:50%;
+  width:60%;
   font-size:18px;
   vertical-align: top;  
   display:inline-block;
@@ -576,15 +570,6 @@ section{
   margin-bottom:20px;
   color:rgba(0,0,0,0.6);
   font-weight:200;
-}
-
-.project-expander .big-button {
-  text-align: center;
-  border:black solid 2px;
-  font-weight:500;
-  padding:5px 10px;
-  margin-top:15px;
-  display:inline-block;
 }
 
 .flex-control-nav.flex-control-paging {
