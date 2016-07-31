@@ -131,7 +131,7 @@ $( document ).ready(function() {
     var name = encodeURIComponent($("#contact-name").val());
     var subject = encodeURIComponent($("#contact-subject").val());
     var message = encodeURIComponent($("#contact-message").val());
-    window.location.href = "mailto:yolandaz@mit.edu?subject=" + subject + "&body=" + message + "%0A%0A" + name;
+    window.location.href = "mailto:me@yolandaz.com?subject=" + subject + "&body=" + message + "%0A%0A" + name;
   });
   //smooth scrolling
   $('#nav a').click(function(){
