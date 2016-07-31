@@ -459,14 +459,15 @@ section{
 
 .project-item {
   position:relative;
-  height:280px;
+  height:260px;
   display:inline-block;
   cursor:hand;
   cursor:pointer;
+  margin: 10px;
 }
 
 .project-item img {
-  width:280px;
+  width:260px;
 }
 
 .project-item .project-overlay {
@@ -516,7 +517,7 @@ section{
   background-color:rgba(255,255,255,1);
   width:1280px;
   margin-left:-220px;
-  margin-top:20px;
+  margin-top:10px;
   margin-bottom:20px;
   padding:50px;
   display:none;
@@ -541,12 +542,12 @@ section{
 }
 
 .project-expander img {
-  max-width:280px;
+  max-width:260px;
   width:100%;
 }
 
 .project-expander .flexslider {
-  max-width:280px;
+  max-width:260px;
   margin: 0 auto;
 }
 
