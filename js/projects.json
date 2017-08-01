@@ -1,0 +1,9 @@
+{
+	"projects": [{
+		"key": "py",
+		"name": "Py",
+		"skills": ["HTML", "CSS", "JS", "JQuery", "Git", "AI", "PS"],
+		"description": "Created a responsive landing website featuring parallax scrolling and an animated particles background for Py, an iOS and Android app that allows users to easily learn the most popular programming languages on the go.",
+		"link": "http://py-app.com/"
+	}]
+}
