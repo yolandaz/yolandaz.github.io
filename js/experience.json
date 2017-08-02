@@ -1,4 +1,13 @@
 {
+	"google": {
+		"name": "Google",
+		"skills": [
+			"Java",
+			"Dart",
+			"Flutter"
+		],
+		"description": "My project during Summer 2017 at Google was to extract meaningful information from revenue data and display it in Google’s mobile CRM app to provide better insight into Google’s revenue for sales teams. I worked with one other intern on this project, and we split up tasks as we went along. I created a Java API and wrote unit tests to retrieve revenue data for use in a counterfactual data analysis tool. Using this API and my partner’s orchestration layer API, I created a store in the mobile app model layer to request and transform data from the API to make it usable by the UI. I wrote test and created a mock store for these tests. Finally, I designed and implemented 3 UI iterations to display the output revenue analysis information in Google’s CRM sales app for both Android and iOS using Flutter and Dart."
+	},
 	"memoriam": {
 		"name": "In Memoriam",
 		"skills": [

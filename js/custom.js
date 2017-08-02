@@ -132,7 +132,7 @@ $(window).load(function () {
 
 $(document).ready(function () {
   // load projects from projects.json
-  $.getJSON('js/projects.json', function (data) {
+  $.getJSON('js/experience.json', function (data) {
     var items = [];
     // TODO this is so gross do like react or something idk
     $.each(data, function (key, info) {
