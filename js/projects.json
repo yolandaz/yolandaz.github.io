@@ -1,9 +1,168 @@
 {
-	"projects": [{
-		"key": "py",
+	"memoriam": {
+		"name": "In Memoriam",
+		"skills": [
+			"AI",
+			"PS",
+			"Unity"
+		],
+		"description": "For CMS.611 Creating Video Games, which I took in Spring 2017, our final project was to develop a video game in a group of 7. We created an escape-the-room style game in which the player has gone insane and needs to escape an asylum. Each room features puzzles that the player has to solve in order to move on to the next room. I was in charge of visual assets, and I designed everything from scratch using Adobe Illustrator and Photoshop, making sure the art conveyed the tone and narrative of our horror themed game.",
+		"link": "/in-memoriam",
+		"isProject": true
+	},
+	"candy": {
+		"name": "Candy Crush",
+		"skills": [
+			"HTML",
+			"CSS",
+			"JavaScript",
+			"JQuery",
+			"Bootstrap"
+		],
+		"description": "For 6.831 User Interface Design, which I took in Spring 2017, our project was to create a web Candy Crush UI using HTML, CSS, and JavaScript. Using drawing elements such as canvas, images, and strokes, I created animations for the candies as well as enabling users to drag candies around to play the game.",
+		"link": "/candy-crush",
+		"isProject": true
+	},
+	"communication": {
+		"name": "Daily Verbal Communication",
+		"skills": [
+			"p5.js"
+		],
+		"description": "For 4.032 Information & Interaction Design, which I took in Spring 2017, my final project was to create a data visualization. Over a week, I recorded every verbal communication I had and details about it. For my final visualization, I displayed this data in an easy to digest way that told a story.",
+		"link": "/daily-communication",
+		"isProject": true
+	},
+	"py": {
 		"name": "Py",
-		"skills": ["HTML", "CSS", "JS", "JQuery", "Git", "AI", "PS"],
+		"skills": [
+			"HTML",
+			"CSS",
+			"JS",
+			"JQuery",
+			"Git",
+			"AI",
+			"PS"
+		],
 		"description": "Created a responsive landing website featuring parallax scrolling and an animated particles background for Py, an iOS and Android app that allows users to easily learn the most popular programming languages on the go.",
-		"link": "http://py-app.com/"
-	}]
+		"link": "http://py-app.com/",
+		"isProject": false
+	},
+	"covered": {
+		"name": "Covered Security",
+		"skills": [
+			"Angular.js",
+			"Node.js",
+			"Sketch",
+			"InVision",
+			"SASS",
+			"AWS",
+			"Grunt",
+			"Protractor",
+			"Git"
+		],
+		"description": "Designed and developed a web-based product and browser extension that helps consumers easily and securely manage their online identity, information, and activity on a team of 5. Using Sketch, InVision, Illustrator, and Photoshop, I created mockups and designed the flow of the website. I also worked on the front-end for the product using technologies including Angular.js, Node.js, SASS, and AWS, and followed best workflow practices including Protractor test-driven development, Grunt automation, Git source control, code reviews, and Agile development.",
+		"link": "http://coveredsecurityinc.com/",
+		"isProject": false
+	},
+	"milo": {
+		"name": "Project Milo",
+		"skills": [
+			"Sketch",
+			"AI",
+			"PS"
+		],
+		"description": "Designed the landing website for Project Milo, a nonprofit website that helps underprivileged students obtain laptops.",
+		"images": 4
+	},
+	"con": {
+		"name": "Committee of N",
+		"skills": [
+			"HTML",
+			"CSS",
+			"JS",
+			"JQuery",
+			"Git",
+			"Node.js",
+			"Socket.IO",
+			"AI",
+			"PS"
+		],
+		"description": "As part of MIT's undergraduate research program, I worked with another student to create from scratch an asynchronous web-based game for teachers to learn how to design schools called Committee of N. My main role was designing the interface and doing all the front-end development. We used a variety of technologies, including Node.js/Express, Socket.IO, and PostgreSQL.",
+		"link": "https://bitbucket.org/nickjbenson/committee-of-n",
+		"isProject": false
+	},
+	"dfa": {
+		"name": "Design For America",
+		"skills": [
+			"HTML",
+			"CSS",
+			"JS",
+			"JQuery",
+			"Git",
+			"AI",
+			"PS"
+		],
+		"description": "As the webmaster for MIT's Design for America, I made major changes to the DFA website, including upgrading the technologies used, improving the website branding, and adding additional features such as a blog and templates. I also mentor DFA project teams on any web development issues they might have.",
+		"link": "http://designforamerica.mit.edu/",
+		"isProject": false
+	},
+	"adt": {
+		"name": "MIT Asian Dance Team",
+		"skills": [
+			"AI",
+			"PS"
+		],
+		"description": "As the co-director of Sales and Media for MIT's Asian Dance Team, I'm in charge of designing promotional posters, flyers, videos, shirt designs, ticket designs, and anything else Asian Dance Team decides to have. I also organize photoshoots, sell show tickets, and create and sell DVDs of our show. Featured on the left are a few of the workshop and promotional posters I made.",
+		"images": 4
+	},
+	"portfolio": {
+		"name": "yolandaz.com",
+		"skills": [
+			"HTML",
+			"CSS",
+			"JS",
+			"JQuery",
+			"AI",
+			"PS"
+		],
+		"description": "My personal website designed and coded from scratch to showcase my projects and skills. Apart from a few JavaScript libraries I used, everything was designed and coded from scratch."
+	},
+	"cartera": {
+		"name": "Cartera Commerce",
+		"skills": [
+			"HTML",
+			"CSS",
+			"JS",
+			"JQuery",
+			"Ajax",
+			"PS"
+		],
+		"description": "During my internship at Cartera Commerce, I completely recreated the main Cartera website. I used SquareSpace as a foundation so the marketing team could easily change content and added a lot of CSS and JavaScript/JQuery on top of that to implement the features SquareSpace didn't have to offer, including integrating the Careers page with the Hirebridge API. I also worked on the UI/UX of Cartera's' browser extension OfferLink.",
+		"link": "http://www.cartera.com",
+		"isProject": false
+	},
+	"dnb": {
+		"name": "Dun & Bradstreet",
+		"skills": [
+			"Python",
+			"AI",
+			"PS"
+		],
+		"description": "I worked with the global security and risk team in application security and penetration testing using tools such as Burp Suite. Since most of the employees outside the security team knew very little about what went on in my team, I also created infographics detailing the app security and risk assessment process.",
+		"images": 2
+	},
+	"freecodecamp": {
+		"name": "Freecodecamp",
+		"skills": [
+			"HTML",
+			"CSS",
+			"JS",
+			"JQuery",
+			"Ajax",
+			"Bootstrap"
+		],
+		"description": "On FreeCodeCamp, I completed 10 projects and around 300 mini-lessons to earn the front-end developer certification. I spent many hours practicing coding and algorithms. You can see my projects by clicking on any image in the gallery.",
+		"images": 5,
+		"imageLinks": ["http://codepen.io/yolandaz/full/yeVQMO", "http://codepen.io/yolandaz/full/adBvJV/", "http://codepen.io/yolandaz/full/XXNmGE/","http://codepen.io/yolandaz/full/bEBwbw/", "http://codepen.io/yolandaz/full/PZbENZ/"]
+	}
 }
