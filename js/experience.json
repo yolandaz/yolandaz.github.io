@@ -1,4 +1,26 @@
 {
+	"facebook": {
+		"name": "Facebook",
+		"skills": [
+			"React.js",
+			"Reason",
+			"PHP"
+		],
+		"description": "I worked on the Messenger Web UI team during my summer at Facebook to upgrade the Facebook chat tab settings menu, both style-wise and feature-wise. The new menu, inspired by the Facebook newsfeed menus, improved its accessibility, visual consistency, and flexibility to add new option items. A few behind the scenes features I also added were an improved testing suite, detailed logging, and experiments. The logging was added in order for the team to track usage of the items and remove/change items appropriately when needed, and experiments were used to test new features such as icons and determine their impact on how the menu performed. I worked primarily in React.js, Reason, and PHP."
+	},
+	"adtwebsite": {
+		"name": "ADT Website",
+		"skills": [
+			"HTML",
+			"CSS",
+			"JS",
+			"JQuery",
+			"Sketch"
+		],
+		"description": "A website I designed and implemented from scratch to showcase my dance team, MIT Asian Dance Team (ADT). By using the YouTube API, it automatically pulls ADT’s latest dance video from our YouTube channel and autoplays it in the background of the landing page beautifully. Social media links are displayed prominently. As the user scrolls down the single-page layout, they see more stunning pictures featuring ADT’s dances and members as well as general information about the team, how to join, and how to contact us.",
+		"link": "http://adt.mit.edu/",
+		"isProject": false
+	},
 	"google": {
 		"name": "Google",
 		"skills": [
