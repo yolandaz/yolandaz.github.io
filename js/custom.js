@@ -1,301 +1,52 @@
-// typing
-$(function () {
-  $('.type').typed({
-    strings: ['create.', 'design.', 'code.', 'solve.', 'dream.'],
-    typeSpeed: 50,
-    backSpeed: 50,
-    backDelay: 1000,
-    loop: true
-  });
+Vue.use(VueScrollTo, {
+  duration: 1000
 });
-
-// particles
-particlesJS('particles-js',
-  {
-    'particles': {
-      'number': {
-        'value': 160,
-        'density': {
-          'enable': true,
-          'value_area': 800
-        }
-      },
-      'color': {
-        'value': '#999999'
-      },
-      'shape': {
-        'type': ['star', 'circle'],
-        'stroke': {
-          'width': 0,
-          'color': '#000000'
-        },
-        'polygon': {
-          'nb_sides': 5
-        },
-        'image': {
-          'src': 'img/github.svg',
-          'width': 100,
-          'height': 100
-        }
-      },
-      'opacity': {
-        'value': 1,
-        'random': true,
-        'anim': {
-          'enable': true,
-          'speed': 1,
-          'opacity_min': 0,
-          'sync': false
-        }
-      },
-      'size': {
-        'value': 3,
-        'random': true,
-        'anim': {
-          'enable': false,
-          'speed': 4,
-          'size_min': 0.3,
-          'sync': false
-        }
-      },
-      'line_linked': {
-        'enable': false,
-        'distance': 150,
-        'color': '#ffffff',
-        'opacity': 0.4,
-        'width': 1
-      },
-      'move': {
-        'enable': true,
-        'speed': 1,
-        'direction': 'none',
-        'random': true,
-        'straight': false,
-        'out_mode': 'out',
-        'bounce': false,
-        'attract': {
-          'enable': false,
-          'rotateX': 600,
-          'rotateY': 600
-        }
-      }
+new Vue({
+  el: '#app',
+  data: {
+    projects: [],
+    name: "",
+    subject: "",
+    message: ""
+  },
+  created: function () {
+    this.getProjects();
+  },
+  mounted: function () {
+    this.getParticlesConfig();
+    this.activateTyped();
+  },
+  methods: {
+    getProjects: function () {
+      axios.get('./js/experience.json')
+        .then(response => {
+          this.projects = response.data.projects;
+          this.projects.forEach((project) => {
+            project.skills = project.skills.join(' \267 ');
+            project.image = `assets/${project.key}.png`;
+          });
+        });
     },
-    'interactivity': {
-      'detect_on': 'canvas',
-      'events': {
-        'onhover': {
-          'enable': true,
-          'mode': 'bubble'
-        },
-        'onclick': {
-          'enable': false,
-          'mode': 'repulse'
-        },
-        'resize': true
-      },
-      'modes': {
-        'grab': {
-          'distance': 400,
-          'line_linked': {
-            'opacity': 1
-          }
-        },
-        'bubble': {
-          'distance': 250,
-          'size': 0,
-          'duration': 2,
-          'opacity': 0.2,
-          'speed': 3
-        },
-        'repulse': {
-          'distance': 400,
-          'duration': 0.4
-        },
-        'push': {
-          'particles_nb': 4
-        },
-        'remove': {
-          'particles_nb': 2
-        }
-      }
+    getParticlesConfig: function () {
+      axios.get('./js/particlesConfig.json')
+        .then(response => {
+          particlesJS('particles-js', response.data);
+        });
     },
-    'retina_detect': true
-  }
-
-);
-
-
-// flexslider
-$(window).load(function () {
-  $('.flexslider').flexslider();
-});
-
-$(document).ready(function () {
-  // load projects from projects.json
-  $.getJSON('js/experience.json', function (data) {
-    var items = [];
-    // TODO this is so gross do like react or something idk
-    $.each(data, function (key, info) {
-      // create project overlay children
-      var $overlay = $('<div>').addClass('project-overlay');
-      var $strongTitle = $('<strong>').text(info.name);
-      var $skills = $('<p>').text(info.skills.join(' \267 '));
-      $overlay.append($strongTitle, $skills);
-
-      // create project expander
-      var $expander = $('<div>').addClass('project-expander').attr('id', key + '-expander');
-      var $expanderContainer = $('<div>').addClass('project-expander-container');
-      var $imageContainer = $('<div>').addClass('image-container');
-      if (info.hasOwnProperty('images') && info.images > 0) {
-        var $flexslider = $('<div>').addClass('flexslider');
-        var $slides = $('<ul>').addClass('slides');
-        for (i = 0; i < parseInt(info.images); i++) {
-          var $imageListItem = $('<li>');
-          var $imageLink = $('<a>').attr('target', '_blank');
-          if (info.hasOwnProperty('imageLinks')) {
-            $imageLink.attr('href', info.imageLinks[i]);
-          } else {
-            $imageLink.attr('href', 'assets/' + key + '-' + (i+1) + '.png');
-          }
-          var $imageSmall = $('<img>').attr('src', 'assets/' + key + '-' + (i+1) + '-fs.png');
-          $imageLink.append($imageSmall);
-          $imageListItem.append($imageLink);
-          $slides.append($imageListItem);
-        }
-        $flexslider.append($slides);
-        $imageContainer.append($flexslider);
-      } else {
-        var $expanderImage = $('<img>').attr('src', 'assets/' + key + '.png');
-        $imageContainer.append($expanderImage);
-      }
-      var $infoContainer = $('<div>').addClass('info-container');
-      var $infoTitle = $('<h2>').text(info.name);
-      var $infoDescription = $('<p>').text(info.description);
-      $infoContainer.append($infoTitle, $skills.clone(), $infoDescription);
-      if (info.hasOwnProperty('link')) {
-        var $infoButton = $('<a>').attr('href', info.link).addClass('big-button').attr('target', '_blank');
-        if (info.isProject) {
-          $infoButton.text('View Project');
-        } else {
-          $infoButton.text('View Website');
-        }
-        $infoContainer.append($infoButton);
-      }
-      $expanderContainer.append($imageContainer, $infoContainer);
-      $expander.append($expanderContainer);
-
-
-      // create project item
-      var $projectItem = $('<div>').addClass('project-item').attr('data-ex', key + '-expander');
-      var $image = $('<img>').attr('src', 'assets/' + key + '.png');
-      $projectItem.append($image, $overlay, $expander);
-      $('#project-container').append($projectItem);
-    });
-    createProjectExpanders();
-  });
-
-  // click send button
-  $('#contact-send').click(function () {
-    var name = encodeURIComponent($('#contact-name').val());
-    var subject = encodeURIComponent($('#contact-subject').val());
-    var message = encodeURIComponent($('#contact-message').val());
-    window.location.href = 'mailto:me@yolandaz.com?subject=' + subject + '&body=' + message + '%0A%0A' + name;
-  });
-
-  // smooth scrolling
-  $('#nav a').click(function () {
-    $('html, body').animate({
-      scrollTop: $($.attr(this, 'href')).offset().top
-    }, 500);
-    return false;
-  });
-
-  // view header when goes into view & scrollspy
-  var aboutSection = new Waypoint({
-    element: $('#about')[0],
-    handler: function (direction) {
-      if (direction === 'down') {
-        $('#nav').removeClass('animated');
-        $('#nav').addClass('visible');
-        $('#nav-container a').removeClass('active');
-        $('#nav-about').addClass('active');
-      } else {
-        $('#nav').removeClass('visible');
-      }
+    activateTyped: function () {
+      new Typed(".type", {
+        strings: ['create.', 'design.', 'code.', 'solve.', 'dream.'],
+        typeSpeed: 50,
+        backSpeed: 50,
+        backDelay: 1000,
+        loop: true
+      });
     },
-    offset: 50
-  });
-
-  // scrollspy for the rest of them
-  var aboutSection = new Waypoint({
-    element: $('#experience')[0],
-    handler: function (direction) {
-      if (direction === 'down') {
-        $('#nav-container a').removeClass('active');
-        $('#nav-' + this.element.id).addClass('active');
-      } else {
-        $('#nav-container a').removeClass('active');
-        $('#nav-' + this.element.id).prev().addClass('active');
-      }
-    },
-    offset: 50
-  });
-  var aboutSection = new Waypoint({
-    element: $('#contact')[0],
-    handler: function (direction) {
-      if (direction === 'down') {
-        $('#nav-container a').removeClass('active');
-        $('#nav-' + this.element.id).addClass('active');
-      } else {
-        $('#nav-container a').removeClass('active');
-        $('#nav-' + this.element.id).prev().addClass('active');
-      }
-    },
-    offset: 50
-  });
-});
-
-function createProjectExpanders() {
-  // project expanders
-  $('.project-item').click(function () {
-    // select correct expander
-    var expander = $('#' + $(this).attr('data-ex'));
-
-    // if clicked the open item, close it
-    if ($(this).hasClass('open')) {
-      $(this).removeClass('open');
-      expander.removeClass('open');
-    } else {
-      // if not, close all
-      $('.project-item').removeClass('open');
-      $('.project-expander').removeClass('open');
-
-      // move expander to right place
-      var containerWidth = $('#project-container').width();
-      var projectWidth = $('.project-item').width();
-      var itemsPerRow = Math.floor(containerWidth / projectWidth);
-      var projectIndex = $(this).index('.project-item') + 1;
-      var numProjects = $('.project-item').length;
-      var insertIndex = Math.ceil(projectIndex / itemsPerRow) * itemsPerRow - 1;
-      if (insertIndex >= numProjects) {
-        insertIndex = numProjects - 1;
-      }
-      var insertAfterItem = $('.project-item:eq(' + insertIndex + ')');
-
-      expander.insertAfter(insertAfterItem);
-
-      // fixth width and positioning
-      expander.width($(window).width() - expander.css('padding-left').replace('px', '') - expander.css('padding-right').replace('px', ''));
-      expander.css('margin-left', -($(window).width() - $('#project-container').width()) / 2);
-
-      // display expander
-      $(this).addClass('open');
-      expander.addClass('open');
-
-      // jump bottom of page to bottom of expander
-      $('html, body').animate({
-        scrollTop: expander.offset().top + expander.outerHeight() - $(window).height()
-      }, 500);
+    sendEmail: function () {
+      var name = encodeURIComponent(this.name);
+      var subject = encodeURIComponent(this.subject);
+      var message = encodeURIComponent(this.message);
+      window.location.href = `mailto:me@yolandaz.com?subject=${subject}&body=${message}%0A%0A${name}`;
     }
-  });
-}
+  }
+});
