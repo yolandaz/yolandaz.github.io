@@ -300,6 +300,7 @@ nav a:hover {
 
 .about-left {
   float: left;
+  margin-bottom: 20px;
 }
 
 .about-profile {
@@ -368,6 +369,13 @@ nav a:hover {
   align-items: center;
   flex-direction: column;
   position: relative;
+  -webkit-filter: brightness(80%);
+  filter: brightness(80%);
+}
+
+.project-item:hover {
+  -webkit-filter: brightness(100%);
+  filter: brightness(100%);
 }
 
 .project-item strong {
@@ -516,4 +524,12 @@ footer p {
   footer p {
     font-size: 16px;
   }
+}
+
+/* =============================================================================
+   V CLOAK
+   ========================================================================== */
+
+[v-cloak] {
+  display: none;
 }

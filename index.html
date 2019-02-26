@@ -59,10 +59,7 @@
           </div>
           <div class="about-right">
             <p>Hi! I’m <strong>Yolanda</strong>. I like making pretty things.</p>
-            <p>Right now, I’m an undergrad at <strong>MIT</strong> studying computer science. The past two summers,
-              I've interned at
-              <strong>Google</strong> and <strong>Facebook</strong>.
-              <!-- my next adventure is fulltime at <strong>Samsara</strong>! -->
+            <p>Right now, I’m a <strong>frontend engineer</strong> at <strong>Samsara</strong>. I graduated from <strong>MIT</strong> with a Bachelor's in computer science. In the past, I've also interned at <strong>Google</strong> and <strong>Facebook</strong>.
             </p>
           </div>
           <div class="about-bottom">
@@ -70,7 +67,7 @@
             <p>Web Design. UI Animation. Typography. Graphic Design. Gradients. Motion Design. UI/UX. Interaction
               Design.</p>
             <h2>I'm also passionate about...</h2>
-            <p>Education. Astronomy. Dance. Cute animals. Yummy food.</p>
+            <p>Education. Dance. Cute animals. Cute things.</p>
           </div>
         </div>
       </div>
@@ -80,7 +77,7 @@
     <section id="projects">
       <div class="section-container">
         <h1 class="section-title">Projects</h1>
-        <div class="project-container">
+        <div class="project-container" v-cloak>
           <a v-for="project in projects" class="project-item" v-bind:style="project.style" v-bind:href="project.link">
             <strong>{{ project.name }}</strong>
             <p>{{ project.skills }}</p>
